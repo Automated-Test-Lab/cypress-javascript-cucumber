@@ -1,0 +1,50 @@
+{
+  "name": "cypress-javascript-cucumber",
+  "version": "1.0.0",
+  "description": "Autometed Test Lab | Cypress Java Script Cucumber",
+  "main": "index.js",
+  "scripts": {
+    "cypress:run": "cypress run",
+    "cypress:open": "cypress open",
+    "test:regressive:chrome": "cypress run --browser chrome --env TAGS=@regression,allure=true"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Automated-Test-Lab/cypress-javascript-cucumber.git"
+  },
+  "author": "Talita Ribeiro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Automated-Test-Lab/cypress-javascript-cucumber.git#readme"
+  },
+  "homepage": "#readme",
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^12.2.0",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.1.5",
+    "@faker-js/faker": "^7.6.0",
+    "@shelex/cypress-allure-plugin": "^2.31.0",
+    "allure-commandline": "^2.17.2",
+    "chai": "^4.3.4",
+    "coffeescript": "^2.5.1",
+    "cypress": "^10.11.0",
+    "cypress-plugin-tab": "^1.0.5",
+    "cypress-wait-until": "^1.7.2",
+    "cypress-xpath": "^1.6.2",
+    "faker-br": "^0.4.1",
+    "graphql": "^14.5.8",
+    "pg": "^8.8.0",
+    "tedious": "^15.1.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "filterSpecs": true,
+    "omitFiltered": true,
+    "stepDefinitions": [
+      "[filepath].{js,ts}",
+      "cypress/support/step_definitions/**/*.{js,ts}",
+      "cypress\\support\\step_definitions\\**\\*.{js,ts}"
+    ]
+  },
+  "dependencies": {
+    "ajv": "^8.11.0"
+  }
+}
